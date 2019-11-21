@@ -136,7 +136,8 @@ public class Exam02 {
 		d. int - 0
 		e. long - 0
 		f. String - ""*/
-		
+	
+		//집에서 한 작업
 	}
 	
 }
