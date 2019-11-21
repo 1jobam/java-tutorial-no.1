@@ -3,6 +3,7 @@ package b_operator;
 public class ComparisonOperator {
 
 	public static void main(String[] args) {
+		//테스트
 		/*
 		 * << 비교 연산자 >>
 		 * - < : 작다
