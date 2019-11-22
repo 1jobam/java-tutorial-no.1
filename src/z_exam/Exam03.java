@@ -41,6 +41,7 @@ public class Exam03 {
 //		int sizeOfBucket = 10; // 바구니의 크기(바구니에 담을 수 있는 사과의 개수)
 //		int numOfBucket = numOfApples / sizeOfBucket + 1; // 모든 사과를 담는데 필요한 바구니의 수
 //		System.out.println("필요한 바구니의 수 :"+numOfBucket);
+//		int numOfBucket = numOfApples / sizeOfBucket + ( numOfApples % sizeOfBucket ? 1:0 ); // 모든 사과를 담는데 필요한 바구니의 수
 
 
 		
@@ -71,7 +72,7 @@ public class Exam03 {
 		다. 19의 경우 20이고, 81의 경우 90이 된다. 30에서 24를 뺀 나머지는 6이기 때문에 변
 		수 num의 값이 24라면 6을 결과로 얻어야 한다. (1)에 알맞은 코드를 넣으시오.
 		[Hint] 나머지 연산자를 사용하라.*/
-//		int num = 24;
+//		int num = 81;
 //		System.out.println(10 - num % 10);
 		
 		
@@ -80,10 +81,10 @@ public class Exam03 {
 		 * 단, 변환 결과값은 소수점셋째자리에서 반올림해야한다.(Math.round()를 사용하지 않고 처리할 것)
 		 */
 //		int fahrenheit = 100;
-//		float celcius = (5/9f *(fahrenheit - 32));
+//		float celcius = (5/9f *(fahrenheit - 32) * 100 + 0.5) / 100f); 
 //		System.out.println("Fahrenheit:"+fahrenheit);
 //		System.out.println("Celcius:"+celcius);
-
+		// (int)((5 / 9f * (fahrenheit - 32)) * 100 + 0.5) / 100f
 		
 		
 	/*	[3-8] 아래 코드의 문제점을 수정해서 실행결과와 같은 결과를 얻도록 하시오.*/
@@ -96,7 +97,7 @@ public class Exam03 {
 //		long l = 3000 * 3000 * 3000L;
 //		float f2 = 0.1f;
 //		double d = 0.1;
-//		boolean result = (float)d=f2;
+//		boolean result = (float)d == f2;
 //		System.out.println("c="+c);
 //		System.out.println("ch="+ch);
 //		System.out.println("f="+f);
