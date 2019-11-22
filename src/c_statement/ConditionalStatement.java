@@ -186,26 +186,37 @@ public class ConditionalStatement {
 //			}
 		
 		// 점수 3개를 입력받아 총점, 평균, 등급을 출력해주세요.
-			System.out.println("1번 점수를 입력해주세요 > ");
-			System.out.println("2번 점수를 입력해주세요 > ");
-			System.out.println("3번 점수를 입력해주세요 > ");
+//			System.out.println("1번 점수를 입력해주세요 > ");
+//			System.out.println("2번 점수를 입력해주세요 > ");
+//			System.out.println("3번 점수를 입력해주세요 > ");
+//			
+//			int park = Integer.parseInt(s.nextLine());
+//			int jong = Integer.parseInt(s.nextLine());
+//			int min = Integer.parseInt(s.nextLine());
+//			
+//			int sum = park + jong + min;
+//			int avg = (park + jong + min) / 3;
+//			
+//			if(sum >= 250 || avg >= 80){
+//				System.out.println("당신의 점수는 A입니다.");
+//			}else if(sum >= 150 || avg >= 60){
+//				System.out.println("당신의 점수는 B입니다.");
+//			}else if(sum >= 50 || avg >= 30){
+//				System.out.println("당신의 점수는 C입니다.");
+//			}else{
+//				System.out.println("알수없습니다.");
+//			}
 			
-			int park = Integer.parseInt(s.nextLine());
-			int jong = Integer.parseInt(s.nextLine());
-			int min = Integer.parseInt(s.nextLine());
+		System.out.println("나는 금사빠다 >");
+		
+		String m = s.nextLine();
+
+		if(m == "yes"){
+			System.out.println("연애");
+		}else if(m == "no"){
+			System.out.println("감정");
+		}
 			
-			int sum = park + jong + min;
-			int avg = (park + jong + min) / 3;
-			
-			if(sum >= 250 || avg >= 80){
-				System.out.println("당신의 점수는 A입니다.");
-			}else if(sum >= 150 || avg >= 60){
-				System.out.println("당신의 점수는 B입니다.");
-			}else if(sum >= 50 || avg >= 30){
-				System.out.println("당신의 점수는 C입니다.");
-			}else{
-				System.out.println("알수없습니다.");
-			}
 			
 	}
 }
