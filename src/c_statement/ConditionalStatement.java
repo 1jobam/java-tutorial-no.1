@@ -63,7 +63,7 @@ public class ConditionalStatement {
 		System.out.println(score + "점에 해당하는 등급은" + grade + " 입니다.");
 
 		// 등급 안에서 +와 -를 나누어 보자.
-		score = 57;
+		score = 55;
 		grade = null;
 		if (score >= 90) {
 			grade = "A";
