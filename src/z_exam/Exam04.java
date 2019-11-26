@@ -1,5 +1,7 @@
 package z_exam;
 
+import java.util.Scanner;
+
 public class Exam04 {
 
 	public static void main(String[] args) {
@@ -12,7 +14,7 @@ public class Exam04 {
 /*		[4-1] 다음의 문장들을 조건식으로 표현하라.
 		1. int형 변수 x가 10보다 크고 20보다 작을 때 true인 조건식
 		int x = 15;
-			if(x > 10 && x < 20){
+			if(10 < x && x < 20){
 			System.out.println("int x가 10보다 크고 20보다 작을 때 표시");
 		}
 		2. char형 변수 ch가 공백이나 탭이 아닐 때 true인 조건식
@@ -92,6 +94,20 @@ public class Exam04 {
 //		}
 //		System.out.println(b + "일 때, 총합이 " + a + "이 된다.");
 		
+//		int sum = 0;
+//		int num = 0;
+//		int s = 1;
+//		
+//		for(int = 1; true; i++, s=-s){
+//			num = i * s;
+//			sum += num;
+//			if( sum == 100 ){
+//			break;
+//			}
+//		}
+//		System.out.println(num);
+//		System.out.println(sum);
+		
 		
 		
 /*		[4-5] 다음의 for문을 while문으로 변경하시오.
@@ -116,6 +132,17 @@ public class Exam04 {
 //			}
 //			System.out.println();
 //		}
+//		
+		int i = 0;
+		while(i <= 10 ){
+			int j = 0;
+			while(j <= i){
+				System.out.print("*");
+				j++;
+			}
+			System.out.println();
+			i++;
+		}
 		
 		
 		
@@ -141,7 +168,7 @@ public class Exam04 {
 		System.out.println("value:"+value);
 		}
 		}*/
-		
+		// Math.random() : 0 ~ 1 미만 랜덤수 발생 0.9999999999 같은
 //		int value = (int)(Math.random()*6)+1;
 //		System.out.println("value : " + value);
 		
@@ -293,8 +320,17 @@ public class Exam04 {
 //			System.out.println("정답 입니다.!!");
 //		}
 //		} while(input != answer); // 무한반복문
-
 		
+//		input = (int)(Math.random() * 100) +1;
+//		int input = 0;
+//		int answer = 0;
+//		Scanner s = new Scanner(System.in);
+//		do{
+//			count++
+//			System.out.println("1과 100사이의 값을 입력해주세요.");
+//			input = Integer.ParseInt(s.nextLine());
+//			System.out.println(count + "만큼 시도 하셨습니다.");
+//		}
 		
 		
 		
@@ -324,19 +360,24 @@ public class Exam04 {
 		[실행결과]
 		12321는 회문수 입니다.*/
 		
-//		int number = 12321;
-//		int tmp = number;
-//		int result = 0; // 변수 number를 거꾸로 변환해서 담을 변수
-//			while(tmp > 0) {
-//				result = result * 10 + tmp % 10;
-//				tmp = tmp % 10;
-//				System.out.println(result);
-//			}
-//			if(number == result)
-//				System.out.println( number + "는 회문수 입니다.");
-//			else
-//				System.out.println( number + "는 회문수가 아닙니다.");
-		
+		int number = 12321;
+		int tmp = number;
+		int result = 0; // 변수 number를 거꾸로 변환해서 담을 변수
+			while(tmp != 0) {
+				result = result * 10 + tmp % 10;
+				tmp = tmp / 10;
+				
+				// result *= 10;
+				// result += tmp % 10;
+				// tmp /= 10;
+				
+				System.out.println(result + "값 " + tmp);
+			}
+			if(number == result){
+				System.out.println( number + "는 회문수 입니다.");
+			}else{
+				System.out.println( number + "는 회문수가 아닙니다.");
+			}
 	}
 
 }
