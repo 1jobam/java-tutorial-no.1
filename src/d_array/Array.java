@@ -74,6 +74,7 @@ public class Array {
 		//index는 1씩 증가하는 규칙이 있어 for문과 함께 사용하기 좋다.
 		for(int i = 0; i < array.length; i++){
 			System.out.println(array[i]);
+			                  
 		}
 		//배열의 길이를 알고 있다고 숫자를 사용하는 것을 하드코딩 이라고 한다.
 		// 길이를 알더라도 length를 사용하는것이 더 좋은 코드이다.
