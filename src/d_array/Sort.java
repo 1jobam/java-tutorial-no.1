@@ -37,9 +37,10 @@ public class Sort {
 	 * 배열 하나를 만들어서 배열의 넓이 만큼 모두 1씩 집어 넣은다음 배열 을 모두 비교하면서 점수가 낮으면 만든 배열의 등수가 +1씩 증가됩니다.
 	 */
 	private static void printRank(int[] numbers) {
+		//int[] rank = new int[numbers.length]; - > 요런 방식도 가능
 		int[] rank = new int[10];
 		rank[0] = 1;
-		rank[1] = 1;	
+		rank[1] = 1;
 		rank[2] = 1;
 		rank[3] = 1;
 		rank[4] = 1;
@@ -55,7 +56,12 @@ public class Sort {
 			}
 		}
 		System.out.println("각 사람들은 몇등 인가요? : " + Arrays.toString(rank) + "\n" +"각 사람들은 몇점 인가요? : "+ Arrays.toString(numbers));
+		for(int i = 0; i < numbers.length; i++){
+			System.out.println(numbers[i] + " : " + rank[i] + "등");
+		}
 	}
+	
+	
 	private static void insertSort(int[] numbers) {
 		/*
 		 * 1,0

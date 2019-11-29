@@ -133,16 +133,16 @@ public class Exam04 {
 //			System.out.println();
 //		}
 //		
-		int i = 0;
-		while(i <= 10 ){
-			int j = 0;
-			while(j <= i){
-				System.out.print("*");
-				j++;
-			}
-			System.out.println();
-			i++;
-		}
+//		int i = 0;
+//		while(i <= 10 ){
+//			int j = 0;
+//			while(j <= i){
+//				System.out.print("*");
+//				j++;
+//			}
+//			System.out.println();
+//			i++;
+//		}
 		
 		
 		
@@ -188,6 +188,28 @@ public class Exam04 {
 //		x=1, y=2
 //		x=3, y=1
 //		x=5, y=0*/
+		
+/*		[4-9] 숫자로 이루어진 문자열 str이 있을 때, 각 자리의 합을 더한 결과를 출력하는 코
+		드를 완성하라. 만일 문자열이 "12345"라면, ‘1+2+3+4+5’의 결과인 15를 출력이 출력되
+		어야 한다. (1)에 알맞은 코드를 넣으시오.
+		[Hint] String클래스의 charAt(int i)을 사용
+		[연습문제]/ch4/Exercise4_9.java
+		class Exercise4_9 {
+		public static void main(String[] args) {
+		String str = "12345";
+		int sum = 0;
+		for(int i=0; i < str.length(); i++) {
+		
+		(1) 알맞은 코드를 넣어 완성하시오.
+		
+		}
+		System.out.println("sum="+sum);
+		}
+		}
+		[실행결과]
+		15*/
+		
+		
 		
 /*		[4-10] int타입의 변수 num 이 있을 때, 각 자리의 합을 더한 결과를 출력하는 코드를
 		완성하라. 만일 변수 num의 값이 12345라면, ‘1+2+3+4+5’의 결과인 15를 출력하라. (1)
@@ -256,6 +278,43 @@ public class Exam04 {
 //			num2 = num3 + num2;
 //			System.out.println("," + num1 + "," + num2);
 //		}
+		
+/*		[4-13] 다음은 주어진 문자열(value)이 숫자인지를 판별하는 프로그램이다. (1)에 알맞
+		은 코드를 넣어서 프로그램을 완성하시오.
+		[연습문제]/ch4/Exercise4_13.java
+		class Exercise4_13
+		{
+		public static void main(String[] args)
+		{
+		String value = "12o34";
+		char ch = ' ';
+		boolean isNumber = true;
+		// 반복문과 charAt(int i)를 이용해서 문자열의 문자를
+		// 하나씩 읽어서 검사한다.
+		for(int i=0; i < value.length() ;i++) {
+		
+		(1) 알맞은 코드를 넣어 완성하시오.
+		
+		}
+		if (isNumber) {
+		System.out.println(value+"는 숫자입니다.");
+		} else {
+		System.out.println(value+"는 숫자가 아닙니다.");
+		}
+		} // end of main
+		} // end of class
+		[실행결과]
+		2*1=2 3*1=3 4*1=4
+		2*2=4 3*2=6 4*2=8
+		2*3=6 3*3=9 4*3=12
+		5*1=5 6*1=6 7*1=7
+		5*2=10 6*2=12 7*2=14
+		5*3=15 6*3=18 7*3=21
+		8*1=8 9*1=9
+		8*2=16 9*2=18
+		8*3=24 9*3=27
+		[실행결과]
+		12o34는 숫자가 아닙니다.*/
 
 		
 		
@@ -360,24 +419,24 @@ public class Exam04 {
 		[실행결과]
 		12321는 회문수 입니다.*/
 		
-		int number = 12321;
-		int tmp = number;
-		int result = 0; // 변수 number를 거꾸로 변환해서 담을 변수
-			while(tmp != 0) {
-				result = result * 10 + tmp % 10;
-				tmp = tmp / 10;
-				
-				// result *= 10;
-				// result += tmp % 10;
-				// tmp /= 10;
-				
-				System.out.println(result + "값 " + tmp);
-			}
-			if(number == result){
-				System.out.println( number + "는 회문수 입니다.");
-			}else{
-				System.out.println( number + "는 회문수가 아닙니다.");
-			}
+//		int number = 12321;
+//		int tmp = number;
+//		int result = 0; // 변수 number를 거꾸로 변환해서 담을 변수
+//			while(tmp != 0) {
+//				result = result * 10 + tmp % 10;
+//				tmp = tmp / 10;
+//				
+//				// result *= 10;
+//				// result += tmp % 10;
+//				// tmp /= 10;
+//				
+//				System.out.println(result + "값 " + tmp);
+//			}
+//			if(number == result){
+//				System.out.println( number + "는 회문수 입니다.");
+//			}else{
+//				System.out.println( number + "는 회문수가 아닙니다.");
+//			}
 	}
 
 }
