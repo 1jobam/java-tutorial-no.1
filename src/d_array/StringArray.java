@@ -77,35 +77,51 @@ public class StringArray {
 		System.out.println(pn);
 			
 //문제 1
-		String star = "12345";
-		int sum = 0;
-		for(int i = 0; i <= star.length(); i++) {
-//			char a = star.charAt(i);
-//			sum += a - '0';
-			sum += (int)star.charAt(i) - '0';
-			System.out.println(sum);
-			}
-		System.out.println("sum="+sum);
+//		String star = "12345";
+//		int sum = 0;
+//		for(int i = 0; i < star.length(); i++) {
+////			char a = star.charAt(i);
+////			sum += a - '0';
+//			sum += star.charAt(i) - 48;
+//			System.out.println("sum="+sum);
+//			}
+		
 //		
 //문제 2
-//		String value = "12o34";
-//		char ch = ' ';
-//		boolean isNumber = true;
-//		// 반복문과 charAt(int i)를 이용해서 문자열의 문자를
-//		// 하나씩 읽어서 검사한다.
-//		for(int i=0; i < value.length() ;i++) {			
-//		}
-//			if (isNumber) {
-//				System.out.println(value+"는 숫자입니다.");
-//			} else {
-//				System.out.println(value+"는 숫자가 아닙니다.");
-//			}
+		String value = "123";
+		char ch = ' ';
+		boolean isNumber = true;
+		// 반복문과 charAt(int i)를 이용해서 문자열의 문자를
+		// 하나씩 읽어서 검사한다.
+		for (int i = 0; i < value.length(); i++) {
+			ch = value.charAt(i);
+			System.out.println("ch : " + ch);
+			if (!('0' <= ch && ch <= '9')) {
+				isNumber = false;
+				break;
+			}
+		}
+		if (isNumber) {
+			System.out.println(value + "는 숫자입니다.");
+		} else {
+			System.out.println(value + "는 숫자가  아닙니다.");
+		}
 			
 //문제 3
 		//숫자를 입력받아 입력받은 숫자에 3자리 마다 콤마(,)를 붙여 출력해주세요.
 		//123456789 -> 123,456,789
 		//12345 -> 12,345
 		//1234 -> 1,234
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 
 }
