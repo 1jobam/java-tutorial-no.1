@@ -1,7 +1,16 @@
 package test;
 
-public class Pp {
+import java.util.*;
 
-	//발표 : 프로그램 주제, 기능, 메서드 구성, 시연
+public class Pp {
 	
+	public static void main(String[] args) {
+	LottoRpg park = new LottoRpg();
+	
+	park.Strat();
+	
+	
+	}
 }
+
+
