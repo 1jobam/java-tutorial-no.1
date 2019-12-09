@@ -6,20 +6,19 @@ public class Store {
 
 	Scanner s = new Scanner(System.in);
 	
-	static String[] cho = {"물약 상점", "무기 상점", "방어구 상점"};
+	String[] cho = {"물약 상점", "무기 상점", "방어구 상점"};
 	
-	static String pot = "기본 HP물약";
-	static int hpPotion = 100;
-	static String sod = "기본 검";
-	static int gg = 500;
-	static String def = "기본 방패";
-	static int dd = 400;
+	String pot = "기본 HP물약";
+	int hpPotion = 100;
+	String sod = "기본 검";
+	int gg = 500;
+	String def = "기본 방패";
+	int dd = 400;
 	
 	
 	//전체 상점중 선택
-	static void select() {
-		Scanner s = new Scanner(System.in);
-		
+	void select() {
+
 		for(int i = 1; i < 50; i++) {
 			System.out.print("*");
 		}
@@ -56,9 +55,7 @@ public class Store {
 	}
 	
 	//물약상점
-	static void liquid() {
-		Scanner s = new Scanner(System.in);
-		
+	void liquid() {
 		for(int i = 1; i < 50; i++) {
 			System.out.print("*");
 		}
@@ -82,8 +79,8 @@ public class Store {
 		int number = Integer.parseInt(s.nextLine());
 		if(number == 1) {
 			LottoRpg pp = new LottoRpg();
-			LottoRpg.coin-= 50;
-			LottoRpg.hp+= 20;
+			pp.coin-= 50;
+			pp.hp+= 20;
 			System.out.println("구매 감사드립니다.");
 			pp.main();
 		}else if(number == 2) {
@@ -92,9 +89,7 @@ public class Store {
 	}
 	
 	//무기상점
-	static void weapon() {
-		Scanner s = new Scanner(System.in);
-		
+	void weapon() {
 		for(int i = 1; i < 50; i++) {
 			System.out.print("*");
 		}
@@ -118,8 +113,8 @@ public class Store {
 		int number = Integer.parseInt(s.nextLine());
 		if(number == 1) {
 			LottoRpg pp = new LottoRpg();
-			LottoRpg.coin -= 500;
-			LottoRpg.damage += 10;
+			pp.coin -= 500;
+			pp.damage += 10;
 			System.out.println("구매 감사드립니다.");
 			pp.main();
 		}else if(number == 2) {
@@ -128,9 +123,7 @@ public class Store {
 	}
 	
 	//방어구상점
-	static void armor() {
-		Scanner s = new Scanner(System.in);
-		
+	void armor() {
 		for(int i = 1; i < 50; i++) {
 			System.out.print("*");
 		}
@@ -154,8 +147,8 @@ public class Store {
 		int number = Integer.parseInt(s.nextLine());
 		if(number == 1) {
 			LottoRpg pp = new LottoRpg();
-			LottoRpg.coin -= 400;
-			LottoRpg.defense += 5;
+			pp.coin -= 400;
+			pp.defense += 5;
 			System.out.println("구매 감사드립니다.");
 			pp.main();
 		}else if(number == 2) {

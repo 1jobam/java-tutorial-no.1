@@ -32,8 +32,8 @@ public class Mapchange {
 	}
 	int mov = Integer.parseInt(s.nextLine());
 	if(mov == 1) {
-		new LottoRpg();
-		LottoRpg.main();
+		LottoRpg ab = new LottoRpg();
+		ab.main();
 	}
 	}
 }

@@ -1,7 +1,5 @@
 package test;
 
-import java.util.*;
-
 public class Pp {
 	
 	public static void main(String[] args) {
@@ -12,5 +10,3 @@ public class Pp {
 	
 	}
 }
-
-
