@@ -39,23 +39,23 @@ package z_exam;
 //		System.out.println("CH:"+t.channel+", VOL:"+ t.volume);
 //		
 		//[6 - 22]
-//		String str = "123";
-//		System.out.println(str+"는 숫자입니까? "+ isNumber(str));
-//		str = "1234o";
-//		System.out.println(str+"는 숫자입니까? "+ isNumber(str));
+		String str = "123";
+		System.out.println(str+"는 숫자입니까? "+ isNumber(str));
+		str = "1234o";
+		System.out.println(str+"는 숫자입니까? "+ isNumber(str));
 		
-		//[6 - 23]
+//		[6 - 23]
 //		int[] data = {3,2,9,4,7};
 //		System.out.println(java.util.Arrays.toString(data));
 //		System.out.println("최대값:"+max(data));
 //		System.out.println("최대값:"+max(null));
 //		System.out.println("최대값:"+max(new int[]{})); // 크기가 0인 배열
 		
-		//[6 - 24]
-		int value = 5;
-		System.out.println(value+"의 절대값:"+abs(value));
-		value = -10;
-		System.out.println(value+"의 절대값:"+abs(value));
+//		//[6 - 24]
+//		int value = 5;
+//		System.out.println(value+"의 절대값:"+abs(value));
+//		value = -10;
+//		System.out.println(value+"의 절대값:"+abs(value));
 	}
 		
 		
@@ -441,18 +441,18 @@ package z_exam;
 //	매개변수 : String str - 검사할 문자열
 //	[Hint] String클래스의 charAt(int i)메서드를 사용하면 문자열의 i번째 위치한 문자를 얻을 수 있다.
 	
-//	public static boolean isNumber(String str){
-//		if (str == null || str.equals(""))
-//			return false;
-//		for (int i = 0; i < str.length(); i++) {
-//			char ch = str.charAt(i);
-//			if (!('0' <= ch && ch <= '9')) {
-//				return false;
-//			}
-//		} // for
-//		return true;
-//	}
-//	}
+	public static boolean isNumber(String str){
+		if (str == null || str.equals(""))
+			return false;
+		for (int i = 0; i < str.length(); i++) {
+			char ch = str.charAt(i);
+			if (!('0' <= ch && ch <= '9')) {
+				return false;
+			}
+		} // for
+		return true;
+	}
+	}
 	
 	
 //	[6-23] 다음과 같이 정의된 메서드를 작성하고 테스트하시오.
@@ -485,9 +485,14 @@ package z_exam;
 //	매개변수 : int value
 	
 
-	public static int abs(int value){
-		return value >=0 ? value : -value;
-	}
+//	public static int abs(int value){
+//		if(value >= 0){
+//			return value;
+//		}else {
+//			return -value;
+//		}
+//		return value >= 0 ? value : -value;
+//	}
 	
 	
-}
+//}
