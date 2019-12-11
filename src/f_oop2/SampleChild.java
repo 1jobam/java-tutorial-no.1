@@ -17,7 +17,7 @@ public class SampleChild extends SampleParent {
 		
 		sc.test(10);
 		
-		SampleParent sp = new SampleChild();
+		SampleParent sp = new SampleChild(); // (SampleChild) new SampleChild(); 형변환이 숨어있다. 생략이 가능하다. UP-casting
 		//부모타입이 가지고 있는 멤버만 사용할 수 있다.
 		System.out.println("sp.var : " + sp.var);
 		System.out.println("sc.var : " + sc.var);

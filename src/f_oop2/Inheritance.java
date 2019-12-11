@@ -20,8 +20,7 @@ public class Inheritance {
 		 * 
 		 * << super() >>
 		 * - 생성자에서 부모 클래스의 생성자를 호출하기 위해 사용한다.
-		 * - 자식 클래스 생성자의 첫줄에 super()가  있어야 한다.
-		 * - 없으면 컴파일러가 자동으로 추가한다.
+ 		 * - 없으면 컴파일러가 자동으로 추가한다.
 		 * 
 		 * << 오버라이딩 >>
 		 * - 상속받은 메서드의 내용을 재정의 하는 것이다.
@@ -34,7 +33,7 @@ public class Inheritance {
 		 * - 상속으로 인해 여러가지 형태를 가지게 되는 특징을 말한다.
 		 * - 부모타입으로 생성된 객체는 부모타입에 정의된 멤버만 사용 가능하다.
 		 * - 부모타입과 자식타입은 서로 형변환이 가능하다.
-		 * - 자식타입 > 부모타입 : Up-casting(생략가능)
+		 * - 자식타입 > 부모타입 : Up-casting(생략가능) // 기본형 형변환 생략이랑 반대이다.
 		 * - 부모타입 > 자식타입 : Down-casting(생략불가)
 		 * - 부모와 자식에 동일한 메서드가 있는 경우 자식의 메서드를 사용한다.
 		 * - 부모와 자식에 동일한 멤버변수가 있는 경우 부모타입에서는 부모의 변수를 자식타입에서는
@@ -52,6 +51,29 @@ public class Inheritance {
 		 * - 객체들간에 객체를 공유하기 위해 사용한다.
 		 */
 		
+		AccessModifier am = new AccessModifier();
+		
+		System.out.println(am.publicVar);
+		am.publicMethod();
+		
+		System.out.println(am.protectedVar);
+		am.protectedMethod();
+		
+		System.out.println(am.defaultVar);
+		am.defaultMethod();
+		
+//		System.out.println(am.privateVar);
+//		am.privateMehod();
+		
+		Time t = new Time();
+		
+//		t.setHour(16);
+//		t.setMinute(5);
+//		t.setSecond(999);
+		
+		t.setSecond(100000);
+		
+		System.out.println(t);
 		
 	}
 
