@@ -75,6 +75,14 @@ public class Inheritance {
 		
 		System.out.println(t);
 		
+		Singleton s = Singleton.getInstance();
+		System.out.println(Singleton.getInstance());
+		System.out.println(Singleton.getInstance());
+		System.out.println(Singleton.getInstance());
+		
+		System.out.println(new Inheritance());
+		System.out.println(new Inheritance());
+		System.out.println(new Inheritance());
 	}
 
 }
