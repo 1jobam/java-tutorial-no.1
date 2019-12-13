@@ -105,7 +105,7 @@ public class Exam07 {
 //		[7-13] Math클래스의 생성자는 접근 제어자가 private이다. 그 이유는 무엇인가?
 //		Math클래스의 모든 메서드가 static메서드이고 인스턴스변수가 존재하지 않기 때
 //		문에 객체를 생성할 필요가 없기 때문이다.
-//		Math 클래스는 수의 기본적 수학 함수들을 제공한다. java ㅠㅛ준 클래스
+//		Math 클래스는 수의 기본적 수학 함수들을 제공한다. java 표준 클래스
 		
 //		[7-15] 클래스가 다음과 같이 정의되어 있을 때, 형변환을 올바르게 하지 않은 것은?
 //		(모두 고르시오.)
@@ -215,9 +215,9 @@ public class Exam07 {
 //}
 //[7-10]
 //class MyTv2 {
-//	boolean isPowerOn;
-//	int channel;
-//	int volume;
+//	private boolean isPowerOn;
+//	private int channel;
+//	private int volume;
 //	final int MAX_VOLUME = 100;
 //	final int MIN_VOLUME = 0;
 //	final int MAX_CHANNEL = 100;
