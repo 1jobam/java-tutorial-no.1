@@ -1,0 +1,102 @@
+<< 데이터베이스 설계 연습 >>
+-- LOTTO RPG게임
+
+
+-- 테이블 개체 추출
+	* 회원가입		/ REGISTER
+	* 캐릭터		/ CRTER
+	* 능력치		/ SMDFUR
+	* LOTTO 추첨	/ LOTTO
+		- LOTTO 추첨 보상	/ LOTTOBO
+	* 아이템		/ ITEM
+	* 인벤토리		/ INVENTORY
+	* NPC		/ NPC
+		- NPC 보상  / NPCBO
+	* 몬스터		/ MONSTER
+		- 몬스터 보상 / MONSTERBO
+
+-- 속성 추출
+	* 회원가입
+		- 이름		/ NAME 			VARCHAR2(5)
+		- 아이디(PK)	/ ID			VARCHAR2(15)
+		- 비밀번호 		/ PW			VARCHAR2(50)
+		- 이메일 		/ EMAIL			VARCHAR2(50)
+		- 집 전화번호 	/ HOME_NUMBER	NUMBER
+		- 휴대 전화번호 	/ PHONE_NUMBER	NUMBER
+		- 휴대전화 인증 여부 / PHONE_CHECK	VARCHAR2(1)
+		- 가입일자 		/ Y_DATE		DATE
+		- 탈퇴일자  	/ N_DATE		TIMESTAMP
+		
+	* 캐릭터
+		- 캐릭터 아이디(PK) 	/ CA_ID		NUMBER
+		- 회원 아이디(FK)
+		- 닉네임			/ CA_NAME	VARCHAR2(10)
+		- 능력치 아이디(FK)
+		- 로또 아이디(FK) // 없고
+		- 인벤토리(FK)
+		 
+	* 능력치
+		- 능력치 아이디(PK)	/ SMD_ID		NUMBER
+		- 캐릭터 아이디(FK)
+		- 공격력			/ SMD_DAMAGE	NUMBER
+		- 방어력			/ SMD_DEFENSE	NUMBER
+		- 체력			/ SMD_HP		NUMBER
+		
+	* LOTTO 추첨
+		- 로또 아이디(PK)	/ LOT_ID	NUMBER
+		- 캐릭터 아이디(FK)
+		- 추첨 번호			/ LOT_CU	NUMBER
+		- 당첨 번호			/ LOT_DAM	NUMBER
+		- 등수			/ LOT_EMD	VARCHAR(4)
+			# LOTTO 추첨 보상
+				- LOTTO 추첨 보상 아이디(PK)	/ LOT_ID	NUMBER
+				- 로또아이디(FK)
+				- 능력치 아이디(FK)
+				- LOTTO 추첨 1등 보상 능력치	/ LOT_N1	NUMBER
+				- LOTTO 추첨 2등 보상 능력치	/ LOT_N2	NUMBER
+				- LOTTO 추첨 3등 보상 능력치	/ LOT_N3	NUMBER
+				- LOTTO 추첨 4등 보상 능력치	/ LOT_N4	NUMBER
+				
+				
+		
+	* 아이템
+		- 아이템 아이디(PK)	/ ITEM_ID	NUMBER(1,100)
+		- 인벤토리 아이디(FK) / X
+		- 아이템 이름		/ ITEM_NAME	VARCHAR2(20)
+		- 아이템 능력 공력	/ ITEM_SMD	VARCHAR2(50)
+		- 아이템 능력 방어력	/ ITEM_SMD	VARCHAR2(50)
+		- 아이템 설명		/ ITEM_TJF	VARCHAR2(200)
+		- 아이템의 종류
+		- 구매 가격			/ ITEM_MA	NUMBER
+		- 판매 가격			/ ITEM_PAN	NUMBER
+		
+	* 인벤토리
+		- 인벤토리 아이디(PK)	/ INV_ID	NUMBER
+		- 아이템 아이디(FK)
+		- 캐릭터 아이디(FK)
+		- 코인			/ SMD_COIN	NUMBER
+		- 장비 아이템		/ INV_JANG	VARCHAR2(50) // x
+		- 소비 아이템		/ INV_SOBI	VARCHAR2(50) //x
+		
+	* NPC
+		- NPC 아이디(PK)	/ NPC_ID	NUMBER
+		- NPC 이름		/ NPC_NAME	VARCHAR2(10)
+		- NPC 퀘스트 종류 - 테이블로
+			# NPC 보상종류
+				- NPC 보상 아이디(PK)
+				- NCP 아이디(FK)
+				- 보상 금액		/ NPC_BO_COIN	NUMBER
+				- 보상 아이템	/ NPC_BO_ITEM	VARCHAR2(20)
+			
+	* 몬스터
+		- 몬스터 아이디(PK)	/ MON_ID		NUMBER
+		- 몬스터 이름		/ MON_NAME		VARCHAR2(10)
+		- 몬스터 공격력		/ MON_DAMAGE	NUMBER
+		- 몬스터 방어력		/ MON_DEFENCE	NUMBER
+		- 몬스터 체력		/ MON_HP		NUMBER
+			# 몬스터 보상 -- > 여러개의 보상이면 확률로 조정해서 보상을 줄수있게끔 컬럼을 나누어준다.
+				- 몬스터 보상아이디(PK)	/ MON_BO_ID		NUMBER
+				- 몬스터 아이디(FK)
+				- 보상 아이템			/ MON_BO_ITEM	VARCHAR2(20)
+				- 보상 코인				/ MON_BO_COIN	NUMBER
+		
